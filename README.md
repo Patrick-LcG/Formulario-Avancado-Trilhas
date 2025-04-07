@@ -66,6 +66,26 @@ Na documentação, será possível encontrar as seguintes informações:
 - 🚧 Roadmap de desenvolvimento
 - 🔍 Metodologias de validação
 
+## 🚀 Como executar localmente
+
+Siga as instruções para rodar o projeto em um ambiente de sua escolha:
+
+### 📋 Pré-requisitos
+- Conexão com internet (para a API de CEP e fonte)
+- Git instalado 
+
+### ⚙️ Configuração do Ambiente
+1. **Clonar o repositório em uma pasta escolhida**
+   ```bash
+   git clone https://github.com/Patrick-LcG/Formulario-Avancado-Trilhas.git
+2. **Acesse a pasta em questão**
+   ```bash
+   cd Formulario-Avancado-Trilhas
+
+### 💻 Executando a Aplicação
+1. **Instale a extenção Live Server no VSCode**
+2. **Clique na opção Go Live na barra inferior direita do VSCode**
+
 ## 🔮 Próximos Passos & Roadmap
 | Status | Feature                    | Descrição                          |
 |--------|----------------------------|------------------------------------|
@@ -82,5 +102,5 @@ Na documentação, será possível encontrar as seguintes informações:
 
 ### Eduardo Oliveira
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github)](https://github.com/Eduardo-Santos-Oliveira)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/eduardo-santos-oliveira-exe)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/eduardo-oliveira-exe/)
 [![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:eduardo.oliveira.exe@gmail.com)
