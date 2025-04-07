@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="styles/formulario_style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Formulario</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            
+            <section class="container__textoInicial">
+                <div class="container__voltar" onclick="direcionarPagina('login_index.html')">
+                    <a href="#">
+                        <img src="img/voltar.png" alt="Ícone de voltar">
+                        Voltar
+                    </a>
+                </div>
+                <h1>Formulario de Inscrição</h1>
+                <p class="paragrafo__linha__21">
+                    Preencha os dados abaixo para fazer sua inscrição no programa Trilhas
+                </p>
+            </section>
+
+            <form id="meuForms">
+                
+                <section class="container_informacaoDoParticipante">
+                    <p class="paragrafo__linha__25"><strong>Informações do participante</strong></p>
+                    <div class="container__input__informacoesParticipante">
+                        
+                        <div class="campo">
+                            <label for="Nome">Nome Completo</label>
+                            <input type="text" class="input__padrao1" id="nomeCompleto" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="DataDeNascimento">Data de Nascimento</label>
+                            <input type="text" maxlength="10" class="input__padrao1" id="dataNascimento" required>
+                            <span class="error" id="dataError">
+                                <img src="img/erro.png" alt>Insira uma data válida
+                            </span>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="CPF">CPF</label>
+                            <input type="text" class="input__padrao1" id="cpf" maxlength="14" required>
+                            <small class="info-cpf">⚠️ Este CPF será utilizado como seu ID de acesso.</small>
+                        </div>
+
+                        <div class="campo">
+                            <label for="Sexo">Sexo</label>
+                            <select name="Sexo" class="input__padrao1" id="sexo" required>
+                                <option value="">Selecione</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" class="input__padrao1" required>
+                            <span class="error" id="emailError">
+                                <img src="img/erro.png" alt> Insira um e-mail válido
+                            </span>
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" maxlength="15" class="input__padrao1" id="telefone" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="comprovante">Documento de identidade</label>
+                            <div class="div__input__files">
+                                <input type="file" class="input__padrao3" required>
+                                <img src="img/file.png" alt="Ícone de arquivo" class="file-icon">
+                                <span>clique aqui para selecionar o arquivo</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="container__endereco">
+                    <p class="paragrafo__enderecoResidencial"><strong>Endereço residencial</strong></p>
+                    
+                    <div class="campo">
+                        <label for="CEP">CEP</label>
+                        <input type="text" class="input__padrao1" maxlength="9" id="cep" required>
+                    </div>
+
+                    <div class="cidade__estado">
+                        <div class="campo">
+                            <label for="Rua">Rua</label>
+                            <input type="text" id="Rua" class="input__padrao2" required>
+                        </div>
+                        <div class="campo">
+                            <label for="Numero">Número</label>
+                            <input type="number" id="Numero" class="input__padrao2" required>
+                        </div>
+                    </div>
+
+                    <div class="cidade__estado">
+                        <div class="campo">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" class="input__padrao2" required>
+                        </div>
+                        <div class="campo">
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" class="input__padrao2" required>
+                        </div>
+                    </div>
+
+                    <div class="comprovante campo">
+                        <label for="comprovante">Comprovante de residência</label>
+                        <div class="div__input__files">
+                            <input type="file" class="input__padrao3" required>
+                            <img src="img/file.png" alt="Ícone de arquivo" class="file-icon">
+                            <span>clique aqui para selecionar o arquivo</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="container__trilhasAprendizagem">
+                    <p class="paragrafo__trilhasDeAprendizagem"><strong>Trilhas de aprendizagem</strong></p>
+                    <label for="selecionar">Selecione apenas uma trilha</label>
+                    <div class="container-cards">
+                        
+                        <label class="card-checkbox" for="checkbox1" id="card-checkbox1">
+                            <input type="radio" id="checkbox1" name="trilha" class="checkbox-hidden" required>
+                            <img src="img/front.png" alt="Programação Front-end">
+                            <span>Programação Front-end</span>
+                        </label>
+
+                        <label class="card-checkbox" for="checkbox2" id="card-checkbox2">
+                            <input type="radio" id="checkbox2" name="trilha" class="checkbox-hidden" required>
+                            <img src="img/back.png" alt="Programação Back-end">
+                            <span>Programação Back-end</span>
+                        </label>
+
+                        <label class="card-checkbox" for="checkbox3" id="card-checkbox3">
+                            <input type="radio" id="checkbox3" name="trilha" class="checkbox-hidden" required>
+                            <img src="img/jogos.png" alt="Programação de Jogos">
+                            <span>Programação de Jogos</span>
+                        </label>
+
+                        <label class="card-checkbox" for="checkbox4" id="card-checkbox4">
+                            <input type="radio" id="checkbox4" name="trilha" class="checkbox-hidden" required>
+                            <img src="img/desing.png" alt="Design e Experiência">
+                            <span>Design e Experiência</span>
+                        </label>
+
+                        <label class="card-checkbox" for="checkbox5" id="card-checkbox5">
+                            <input type="radio" id="checkbox5" name="trilha" class="checkbox-hidden" required>
+                            <img src="img/banco.png" alt="Ciência de Dados">
+                            <span>Ciência de Dados</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="container__senha">
+                    <p class="paragrafo__senha"><strong>Crie sua Senha</strong></p>
+                    
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="input__padrao1" id="senha" minlength="6" required>
+                        <div class="forca-senha">
+                            <div class="barra" id="barraForca"></div>
+                        </div>
+                        <div id="requisitosSenha">
+                            <p class="requisito" data-requisito="length"><span class="icone">❌</span> Mínimo 6 caracteres</p>
+                            <p class="requisito" data-requisito="number"><span class="icone">❌</span> Pelo menos 1 número</p>
+                            <p class="requisito" data-requisito="uppercase"><span class="icone">❌</span> Pelo menos 1 letra maiúscula</p>
+                            <p class="requisito" data-requisito="special"><span class="icone">❌</span> Pelo menos 1 caractere especial (@$!%*?&)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="confirmarSenha">Confirme a Senha</label>
+                        <input type="password" class="input__padrao1" id="confirmarSenha" minlength="6" required>
+                        <div id="feedbackSenha" class="feedback-senha">
+                            <span id="iconeFeedback">❌</span>
+                            <span id="textoFeedback">As senhas não coincidem</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="termos_e_condicoes">
+                    <input type="checkbox" id="termos_e_condicoes" name="termos_e_condicoes" required>
+                    <label for="termos_e_condicoes">
+                        Declaro que li e concordo com os 
+                        <span class="texto__destaque">Termos e Condições</span> 
+                        e com a <span class="texto__destaque">Política de Privacidade</span>.
+                    </label>
+                </section>
+
+                <section>
+                    <div class="botoes">
+                        <a href="#" class="botao__cancelar" onclick="direcionarPagina('login_index.html')">Cancelar</a>
+                        <button href="#" class="botao__salvar" type="button" id="botaoSalvar">Salvar</button>
+                        <button href="#" class="botao__limpar" type="button" id="limparDados">Limpar dados</button>
+                        <button type="button" onclick="confirmarInscricao()" class="botao__fazerinscricao">Fazer inscrição</button>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </main>
+
+    <script src="scripts/formulario_script.js"></script>
+</body>
+</html>
